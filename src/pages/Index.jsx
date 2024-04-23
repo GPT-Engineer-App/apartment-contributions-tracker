@@ -95,8 +95,16 @@ const Index = () => {
           <ModalHeader>Rechercher des cotisations</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
-            {/* Implémenter la logique de recherche ici */}
-            <Text>Implémenter la logique de recherche ici</Text>
+            <FormControl>
+              <FormLabel>Type de recherche</FormLabel>
+              <Select placeholder="Choisir le type de recherche">
+                <option value="user">Par utilisateur</option>
+                <option value="apartment">Par appartement</option>
+              </Select>
+            </FormControl>
+            <FormControl mt={4}>
+              <Input placeholder="Entrez votre critère de recherche" />
+            </FormControl>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3}>
