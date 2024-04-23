@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, FormControl, FormLabel, Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, Text, useToast } from "@chakra-ui/react";
+import { Box, Button, FormControl, FormLabel, Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, Text, useToast, Select } from "@chakra-ui/react";
 import { FaSearch, FaPlus } from "react-icons/fa";
 
 const Index = () => {
@@ -46,7 +46,13 @@ const Index = () => {
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Numéro d'appartement</FormLabel>
-              <Input placeholder="Numéro d'appartement" value={apartmentNumber} onChange={(e) => setApartmentNumber(e.target.value)} />
+              <Select placeholder="Sélectionnez un numéro" value={apartmentNumber} onChange={(e) => setApartmentNumber(e.target.value)}>
+                {Array.from({ length: 24 }, (_, i) => (
+                  <option key={i + 1} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
+              </Select>
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>Mois</FormLabel>
