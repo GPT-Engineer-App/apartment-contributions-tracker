@@ -56,11 +56,23 @@ const Index = () => {
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>Mois</FormLabel>
-              <Input placeholder="Mois" value={month} onChange={(e) => setMonth(e.target.value)} />
+              <Select placeholder="Mois" value={month} onChange={(e) => setMonth(e.target.value)}>
+                {Array.from({ length: 12 }, (_, i) => (
+                  <option key={i + 1} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
+              </Select>
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>Année</FormLabel>
-              <Input placeholder="Année" value={year} onChange={(e) => setYear(e.target.value)} />
+              <Select placeholder="Année" value={year} onChange={(e) => setYear(e.target.value)}>
+                {Array.from({ length: 16 }, (_, i) => (
+                  <option key={2015 + i} value={2015 + i}>
+                    {2015 + i}
+                  </option>
+                ))}
+              </Select>
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>Montant</FormLabel>
