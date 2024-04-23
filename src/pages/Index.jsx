@@ -98,12 +98,12 @@ const Index = () => {
             <FormControl>
               <FormLabel>Type de recherche</FormLabel>
               <Select placeholder="Choisir le type de recherche">
-                <option value="user">Par utilisateur</option>
                 <option value="apartment">Par appartement</option>
+                <option value="year">Par année</option>
               </Select>
             </FormControl>
             <FormControl mt={4}>
-              <Input placeholder="Entrez votre critère de recherche" />
+              <Input placeholder="Entrez le numéro d'appartement ou l'année" />
             </FormControl>
           </ModalBody>
           <ModalFooter>
